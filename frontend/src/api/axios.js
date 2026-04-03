@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL || 'http://localhost:8080/api',
+  baseURL: process.env.REACT_APP_API_BASE_URL || '"https://movie-booking-system-ja3o.onrender.com/api",
   headers: { 'Content-Type': 'application/json' },
   timeout: 15000, // 15s timeout
 });
