@@ -6,7 +6,7 @@ const API = axios.create({
   timeout: 15000,
 });
 
-export default API;
+
 
 // ── Request interceptor — attach JWT ───────────────────────────
 API.interceptors.request.use(
