@@ -1,10 +1,12 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL || '"https://movie-booking-system-ja3o.onrender.com/api",
+  baseURL: process.env.REACT_APP_API_BASE_URL || "https://movie-booking-system-ja3o.onrender.com/api",
   headers: { 'Content-Type': 'application/json' },
-  timeout: 15000, // 15s timeout
+  timeout: 15000,
 });
+
+export default API;
 
 // ── Request interceptor — attach JWT ───────────────────────────
 API.interceptors.request.use(
