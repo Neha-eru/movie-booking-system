@@ -18,11 +18,12 @@ public class CorsConfig {
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
 
-        // Allow React dev server origins
+        // ✅ Allow local + your deployed frontend
         config.setAllowedOrigins(List.of(
                 "http://localhost:3000",
                 "http://localhost:3001",
-                "http://127.0.0.1:3000"
+                "http://127.0.0.1:3000",
+                "https://movie-booking-system-neha.netlify.app" // 🔥 your frontend
         ));
 
         config.setAllowedMethods(List.of(
