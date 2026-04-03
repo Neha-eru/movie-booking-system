@@ -11,4 +11,4 @@ mvn spring-boot:run
 java -jar target/movie-booking-backend-0.0.1-SNAPSHOT.jar
 ```
 
-Open http://localhost:8080/movies to see seeded movies. H2 console available at /h2-console (jdbc:h2:mem:testdb).
+Open http://movie-booking-system-ja3o.onrender.com/movies to see seeded movies. H2 console available at /h2-console (jdbc:h2:mem:testdb).
