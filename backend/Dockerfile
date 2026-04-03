@@ -1,10 +1,15 @@
+# Use Maven to build
+FROM maven:3.9.9-eclipse-temurin-17 AS build
+
+WORKDIR /app
+COPY . .
+
+RUN mvn clean package -DskipTests
+
+# Use lightweight image to run
 FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
 
-COPY . .
-
-RUN chmod +x mvnw || true
-RUN ./mvnw clean package || mvn clean package
-
-CMD ["java", "-jar", "target/*.jar"]
+CMD ["java", "-jar", "app.jar"]
