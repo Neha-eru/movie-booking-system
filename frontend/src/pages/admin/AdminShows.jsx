@@ -24,7 +24,7 @@ const AdminShows = () => {
   const fetchData = async () => {
     try {
       const showsRes = await adminAPI.getAllShows();
-const moviesRes = await axios.get('http://movie-booking-system-ja3o.onrender.com/api/movies');
+const moviesRes = await axios.get('https://movie-booking-system-ja3o.onrender.com/api/movies');
 
 console.log("Movies:", moviesRes.data); // debug
 
